@@ -1,0 +1,29 @@
+<head>
+  <title>modal-example</title>
+</head>
+
+<body>
+  <p>Body content</p>
+  <button class="modal" data-modal-template="modalOne">Modal One</button>
+  <button class="modal" data-modal-template="modalTwo">Modal Two</button>
+  
+  {{> modal}}
+</body>
+
+<template name="modal">
+  {{#if activeModal}}
+    <div class="modal">
+      {{> activeModal}}
+    </div>
+  {{/if}}
+</template>
+
+<template name="modalOne">
+  <h1>Modal One</h1>
+  <p>...</p>
+</template>
+
+<template name="modalTwo">
+  <h1>Modal Two</h1>
+  <p>...</p>
+</template>
