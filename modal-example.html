@@ -13,7 +13,7 @@
 <template name="modal">
   {{#if activeModal}}
     <div class="modal">
-      {{> activeModal}}
+      {{> UI.dynamic template=activeModal}}
     </div>
   {{/if}}
 </template>

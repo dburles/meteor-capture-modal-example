@@ -1,7 +1,7 @@
 if (Meteor.isClient) {
 
   UI.body.events({
-    'click .modal': function(event) {
+    'click button.modal': function(event) {
       var template = $(event.target).data('modal-template');
       Session.set('activeModal', template);
     }
@@ -9,7 +9,7 @@ if (Meteor.isClient) {
 
   Template.modal.helpers({
     activeModal: function() {
-      return Template[Session.get('activeModal')];
+      return Session.get('activeModal');
     }
   });
 
